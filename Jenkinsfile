@@ -5,13 +5,18 @@ pipeline {
             label 'ROBOSHOP'
         }
     }
+    environment {
+        myBranch = "Jenkins"
+        EMAIL = "ramcharan@gmail.com"
+    }
     stages {
         stage('Build') {
             steps {
                 script {
                     sh """
                         echo "Building"
-                        exit 1
+                        echo "The current branch is ${myBranch}"
+                        echo "The current email is ${EMAIL}"
                     """
                 }
             }
