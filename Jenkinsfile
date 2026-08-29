@@ -34,4 +34,10 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            echo 'I always say hello again!!!'
+        }
+    }
 }
