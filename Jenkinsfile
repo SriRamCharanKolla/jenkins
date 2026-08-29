@@ -71,8 +71,8 @@ pipeline {
         unstable {
             echo 'Something is fishy here!!!!'
         }
-        aborted {
-            echo 'My master has aborted me :(';
-        }
+        // aborted {
+        //     echo 'My master has aborted me :(';
+        // }
     }
 }
