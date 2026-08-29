@@ -11,6 +11,7 @@ pipeline {
     }
     options {
         disableConcurrentBuilds()
+        timeout(time: 5, unit: 'SECONDS')
     }
     stages {
         stage('Build') {
@@ -20,7 +21,7 @@ pipeline {
                         echo "Building"
                         echo "The current branch is ${myBranch}"
                         echo "The current email is ${EMAIL}"
-                        sleep 5
+                        sleep 10
                     """
                 }
             }
