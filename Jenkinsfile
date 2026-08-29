@@ -9,6 +9,9 @@ pipeline {
         myBranch = "Jenkins"
         EMAIL = "ramcharan@gmail.com"
     }
+    options {
+        disableConcurrentBuilds()
+    }
     stages {
         stage('Build') {
             steps {
@@ -17,6 +20,7 @@ pipeline {
                         echo "Building"
                         echo "The current branch is ${myBranch}"
                         echo "The current email is ${EMAIL}"
+                        sleep 5
                     """
                 }
             }
