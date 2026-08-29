@@ -11,7 +11,7 @@ pipeline {
     }
     options {
         disableConcurrentBuilds()
-        timeout(time: 5, unit: 'SECONDS')
+        // timeout(time: 5, unit: 'SECONDS')
     }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
@@ -28,7 +28,7 @@ pipeline {
                         echo "Building"
                         echo "The current branch is ${myBranch}"
                         echo "The current email is ${EMAIL}"
-                        sleep 10
+                        // sleep 10
                     """
                 }
             }
