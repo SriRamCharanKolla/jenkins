@@ -11,6 +11,7 @@ pipeline {
                 script {
                     sh """
                         echo "Building"
+                        exit 1
                     """
                 }
             }
@@ -38,6 +39,18 @@ pipeline {
     post {
         always {
             echo 'I always say hello again!!!'
+        }
+        success {
+            echo 'Hurrayyyy pipeline succeeded!!!!!!'
+        }
+        failure {
+            echo 'Ohh noooooo pipeline failed!!!!!!'
+        }
+        unstable {
+            echo 'Something is fishy here!!!!'
+        }
+        aborted {
+            echo 'My master has aborted me :(';
         }
     }
 }
