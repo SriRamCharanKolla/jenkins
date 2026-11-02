@@ -26,7 +26,7 @@ pipeline {
                 script {
                     sh """
                         echo "Building"
-                        echo "The current branch is ${myBranch}" 
+                        echo "The current branch is ${myBranch}"
                         echo "The current email is ${EMAIL}"
                         # sleep 10
                     """
