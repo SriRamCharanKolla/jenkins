@@ -2,7 +2,7 @@ pipeline {
     // agent any
     agent {
         node {
-            label 'ROBOSHOP'
+            label 'roboshop'
         }
     }
     environment {
